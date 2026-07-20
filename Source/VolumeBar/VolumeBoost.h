@@ -7,6 +7,11 @@
 // and is hard-clamped here to avoid runaway distortion, but it can still be
 // LOUD. The 1.5x default cap and the Danger-Zone friction are deliberate
 // guards. Gains reset to 1.0x and Danger Zone resets to OFF on every launch.
+//
+// PLACEMENT: this file and VolumeBoost.x live in the TOP LEVEL of Source/,
+// not in a subfolder. The Makefile only globs `Source/*.x` (top level) and
+// `find Source -name '*.m'`; a `.xm` file or a file in a subfolder would be
+// skipped by the build.
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
